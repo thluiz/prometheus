@@ -9,7 +9,7 @@ ADD mix.exs mix.lock ./
 RUN mix do deps.get, deps.compile
 
 # Same with npm deps
-ADD apps/prometheus_web/assets/package.json assets/
+COPY apps/prometheus_web/assets/. assets/
 RUN cd assets && \
     npm install
 
