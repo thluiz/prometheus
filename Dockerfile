@@ -21,12 +21,13 @@ RUN yarn --cwd apps/prometheus_web/assets install --pure-lockfile && \
     yarn --cwd apps/prometheus_web/assets deploy && \
     cd apps/prometheus_web && mix phx.digest
 
+ENV DATABASE_URL ${DATABASE_URL}
+ENV SECRET_KEY_BASE ${SECRET_KEY_BASE}
+
 RUN mix release
 
 FROM elixir:1.10.2-alpine
 
-ENV DATABASE_URL ${DATABASE_URL}
-ENV SECRET_KEY_BASE ${SECRET_KEY_BASE}
 
 RUN addgroup -S release && \
     adduser -S -G release release && \
