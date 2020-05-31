@@ -1,49 +1,26 @@
-FROM elixir:1.10.3-alpine as asset-builder-mix-getter
+FROM bitwalker/alpine-elixir-phoenix:latest
 
-ENV HOME=/opt/app
-WORKDIR $HOME
+# Set exposed ports
+EXPOSE 5000
+ENV PORT=5000 MIX_ENV=prod
 
-RUN mix do local.hex --force, local.rebar --force
+# Cache elixir deps
+ADD mix.exs mix.lock ./
+RUN mix do deps.get, deps.compile
 
-COPY config/ ./config/
-COPY mix.exs mix.lock ./
+# Same with npm deps
+ADD assets/package.json assets/
+RUN cd assets && \
+    npm install
 
-RUN mix deps.get
+ADD . .
 
-############################################################
-FROM node:12.16.2 as asset-builder
+# Run frontend build, compile, and digest assets
+RUN cd assets/ && \
+    npm run deploy && \
+    cd - && \
+    mix do compile, phx.digest
 
-ENV HOME=/opt/app
-WORKDIR $HOME
-
-# COPY --from=asset-builder-mix-getter $HOME/deps $HOME/deps
-
-WORKDIR $HOME/assets
-COPY assets/ ./
-RUN npm install
-RUN ./node_modules/webpack/bin/webpack.js --mode="production"
-
-############################################################
-FROM elixir:1.10.3-alpine
-
-ENV HOME=/opt/app
-WORKDIR $HOME
-
-RUN mix do local.hex --force, local.rebar --force
-
-COPY config/ $HOME/config/
-COPY mix.exs mix.lock $HOME/
-
-COPY lib/ ./lib
-
-COPY priv/ ./priv
-
-ENV MIX_ENV=prod
-
-RUN mix do deps.get --only $MIX_ENV, deps.compile, compile
-
-COPY --from=asset-builder $HOME/priv/static/ $HOME/priv/static/
-
-RUN mix phx.digest
+USER default
 
 CMD ["mix", "phx.server"]
