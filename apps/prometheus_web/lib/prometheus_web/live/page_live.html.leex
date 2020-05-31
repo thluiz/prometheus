@@ -1,48 +1,469 @@
-<section class="phx-hero">
-  <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
-  <p>Peace-of-mind from prototype to production</p>
+      <div class="row">
+        <div class="column">
+          <h3>Próximos Eventos</h3>
+        </div>
+      </div>
 
-  <form phx-change="suggest" phx-submit="search">
-    <input type="text" name="q" value="<%= @query %>" placeholder="Live dependency search" list="results" autocomplete="off"/>
-    <datalist id="results">
-      <%= for {app, _vsn} <- @results do %>
-        <option value="<%= app %>"><%= app %></option>
-      <% end %>
-    </datalist>
-    <button type="submit" class="btn-indigo" phx-disable-with="Searching...">Go to Hexdocs</button>
-  </form>
-</section>
+      <!-- div class="row">
+        <div class="column">
+          <div class="card show-yellow">
+            <div class="container">
+              <h6 class="title">Reunião de Gestão</h6>
+              <span class="when">10:00 - 10:30</span>
+              <p>Aberto aos Tutores e Gestores dos Centros de Transmissão</p>
+              <p>
+                <a href="https://meet.google.com/mha-nydc-ppf" target="_blank" rel="noopener">
+                  https://meet.google.com/mha-nydc-ppf
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card show-yellow">
+            <div class="container">
+              <h6 class="title">
+                Atividade Especial com Tutores
+              </h6>
+              <span class="when">10:30 - 12:00</span>
+              <p>Tutores e Gestores dos Centros de Transmissão</p>
+              <p>
+                <a href="https://meet.google.com/mha-nydc-ppf" target="_blank" rel="noopener">
+                  https://meet.google.com/mha-nydc-ppf
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div -->
 
-<section class="row">
-  <article class="column">
-    <h2>Resources</h2>
-    <ul>
-      <li>
-        <a href="https://hexdocs.pm/phoenix/overview.html">Guides &amp; Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix/blob/v1.5/CHANGELOG.md">v1.5 Changelog</a>
-      </li>
-    </ul>
-  </article>
-  <article class="column">
-    <h2>Help</h2>
-    <ul>
-      <li>
-        <a href="https://elixirforum.com/c/phoenix-forum">Forum</a>
-      </li>
-      <li>
-        <a href="https://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on Freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
-      </li>
-      <li>
-        <a href="https://elixir-slackin.herokuapp.com/">Elixir on Slack</a>
-      </li>
-    </ul>
-  </article>
-</section>
+      <div class="row">
+        <div class="column">
+          <h4 class="when">Segunda 01/06/2020</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="card show-green">
+            <div class="container">
+              <h6 class="title">Programa Fundamental</h6>
+              <span class="when">19:00 - 20:00</span>
+              <p>Aberto a todos</p>
+              <p>
+                <a
+                  href="https://meet.google.com/btz-nzhc-pmp"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  https://meet.google.com/btz-nzhc-pmp
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card show-green">
+            <div class="container">
+              <h6 class="title">Programa Experiencial</h6>
+              <span class="when">20:00 - 20:30</span>
+              <p>Aberto a todos como ouvintes</p>
+              <p>
+                <a
+                  href="https://meet.google.com/btz-nzhc-pmp"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  https://meet.google.com/btz-nzhc-pmp
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="card show-green">
+            <div class="container">
+              <h6 class="title">Programa Tradicional</h6>
+              <span class="when">20:30 - 21:00</span>
+              <p>Aberto a todos como ouvintes</p>
+              <p>Voltado para os praticantes do Programa Tradicional</p>
+              <p>
+                <a
+                  href="https://meet.google.com/btz-nzhc-pmp"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  https://meet.google.com/btz-nzhc-pmp
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="card show-red">
+            <div class="container">
+              <h6 class="title">Nível Superior Final</h6>
+              <span class="when">21:00 - 22:00</span>
+              <p>Reservado a acessantes desse domínio</p>
+              <p>
+                <a
+                  href="https://meet.google.com/btz-nzhc-pmp"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  https://meet.google.com/btz-nzhc-pmp
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUARTA -->
+      <!-- div class="row">
+  <div class="column">
+    <h4 class="when">Quarta 27/05/2020</h4>
+  </div>
+</div>
+
+      <div class="row">
+  <div class="column">
+    <div class="card show-green">
+      <div class="container">
+        <h6 class="title">Programa Fundamental</h6>
+        <span class="when">16:00 - 17:00</span>
+        <p>Aberto a todos como ouvintes</p>              
+        <p>
+          <a href="https://meet.google.com/uai-jyse-iyb" target="_blank" rel="noopener">
+            https://meet.google.com/uai-jyse-iyb
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card show-green">
+      <div class="container">
+        <h6 class="title">Programa Experiencial</h6>
+        <span class="when">17:00 - 17:30</span>
+        <p>Aberto a todos como ouvintes</p>              
+        <p>
+          <a href="https://meet.google.com/uai-jyse-iyb" target="_blank" rel="noopener">
+            https://meet.google.com/uai-jyse-iyb
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card show-green">
+      <div class="container">
+        <h6 class="title">Programa Tradicional</h6>
+        <span class="when">17:30 - 18:00</span>              
+        <p>Voltado para os praticantes do Programa Tradicional</p>
+        <p>
+          <a href="https://meet.google.com/uai-jyse-iyb" target="_blank" rel="noopener">
+            https://meet.google.com/uai-jyse-iyb
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="column">
+    <div class="card show-blue">
+      <div class="container">
+        <h6 class="title">Encontro Remoto com Grão Mestre Leo Imamura</h6>
+        <span class="when">19:00 - 20:00</span>
+        <p>Aberto a todos</p> 
+        <p>                
+          <a href="https://us02web.zoom.us/j/81171623890?pwd=QmdPMHJzRlA0T0IxL21DWVU4SDROUT09" target="_blank" rel="noopener">
+            https://us02web.zoom.us/j/81171623890?pwd=QmdPMHJzRlA0T0IxL21DWVU4SDROUT09
+          </a>
+        </p>             
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="card show-blue">
+      <div class="container">
+        <h6 class="title">
+          Encontro Temático Remoto com Mestre Senior Julio Camacho
+        </h6>
+        <span class="when">20:15 - 22:00</span>
+        <p>Aberto a todos</p>
+        <p>
+          <a href="https://meet.google.com/nzf-dtfz-mjo" target="_blank" rel="noopener">
+            https://meet.google.com/nzf-dtfz-mjo
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div -->
+
+      <!-- FIM QUARTA -->
+
+      <!-- Inicio Quinta -->
+      <!-- div class="row">
+        <div class="column">
+          <h4 class="when">Quinta 28/05/2020</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="card show-red">
+            <div class="container">
+              <h6 class="title">Encontro de Tutores</h6>
+              <span class="when">21:00 - 22:00</span>
+              <p>Reservado aos Tutores da MYVTMI.IM</p>
+              <p>
+                <a href="https://meet.google.com/wtn-irki-kor" target="_blank" rel="noopener">
+                  https://meet.google.com/wtn-irki-kor
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div -->
+
+      <!-- Fim Quinta -->
+
+      <!-- Inicio Sexta -->
+      <!-- div class="row">
+        <div class="column">
+          <h4 class="when">Sexta 29/05/2020</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="card show-green">
+            <div class="container">
+              <h6 class="title">Programa Fundamental</h6>
+              <span class="when">10:00 - 11:00</span>
+              <p>Aberto a todos</p>
+              <p>
+                <a href="https://meet.google.com/zmj-tepn-mtm" target="_blank" rel="noopener">
+                  https://meet.google.com/zmj-tepn-mtm
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="card show-green">
+            <div class="container">
+              <h6 class="title">Programa Experiencial</h6>
+              <span class="when">11:00 - 11:30</span>
+              <p>Aberto a todos como ouvintes</p>
+              <p>
+                <a href="https://meet.google.com/zmj-tepn-mtm" target="_blank" rel="noopener">
+                  https://meet.google.com/zmj-tepn-mtm
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card show-green">
+            <div class="container">
+              <h6 class="title">Programa Tradicional</h6>
+              <span class="when">11:30 - 12:00</span>
+              <p>Aberto a todos como ouvintes</p>
+              <p>
+                <a href="https://meet.google.com/zmj-tepn-mtm" target="_blank" rel="noopener">
+                  https://meet.google.com/zmj-tepn-mtm
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="card show-cyan">
+            <div class="container">
+              <h6 class="title">Reunião Discipular</h6>
+              <span class="when">16:00 - 17:30</span>
+              <p>Reservado a Discípulos do Clã Moy Jo Lei Ou</p>
+              <p>
+                <a href="https://meet.google.com/gji-gert-pyg" target="_blank" rel="noopener">
+                  https://meet.google.com/gji-gert-pyg
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div -->
+
+      <!-- Fim Sexta -->
+
+      <div class="row">
+        <div class="column">
+          <a
+            href="/images/agenda-semana-23.png"
+            target="_blank"
+            alt="Ver Maior"
+          >
+            <img
+              src="/images/agenda-semana-23.png?v=4"
+              class="clearfix responsive"
+              alt="Agenda para semana de 01/06 a 05/06 - Click para ver maior"
+              title="Agenda para semana de 01/06 a 05/06 - Click para ver maior"
+            />
+          </a>
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <br />
+      <div class="row">
+        <div class="col">
+          <button
+            disabled
+            style="display:none"
+            class="js-push-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+          >
+            Enable Push Messaging
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const applicationServerPublicKey =
+        "BDw-T4EoW6fR1Re-oSIF4hprfRdSdtITsGBCjM46toRs_x16uB4EdJppZAoXBogBAM0guT5Fdsie9HERCTTqqcg";
+
+      const pushButton = document.querySelector(".js-push-btn");
+
+      function initializeUI() {
+        pushButton.addEventListener("click", function () {
+          pushButton.disabled = true;
+          if (isSubscribed) {
+            unsubscribeUser();
+          } else {
+            subscribeUser();
+          }
+        });
+
+        // Set the initial subscription value
+        swRegistration.pushManager
+          .getSubscription()
+          .then(function (subscription) {
+            isSubscribed = !(subscription === null);
+
+            updateSubscriptionOnServer(subscription);
+
+            if (isSubscribed) {
+              console.log("User IS subscribed.");
+            } else {
+              console.log("User is NOT subscribed.");
+            }
+
+            updateBtn();
+          });
+      }
+
+      function updateBtn() {
+        if (isSubscribed) {
+          pushButton.textContent = "Disable Push Messaging";
+        } else {
+          pushButton.textContent = "Enable Push Messaging";
+        }
+
+        pushButton.disabled = false;
+      }
+
+      function subscribeUser() {
+        const applicationServerKey = urlB64ToUint8Array(
+          applicationServerPublicKey
+        );
+        swRegistration.pushManager
+          .subscribe({
+            userVisibleOnly: true,
+            applicationServerKey: applicationServerKey,
+          })
+          .then(function (subscription) {
+            console.log("User is subscribed.");
+
+            updateSubscriptionOnServer(subscription);
+
+            isSubscribed = true;
+
+            updateBtn();
+          })
+          .catch(function (err) {
+            console.log("Failed to subscribe the user: ", err);
+            updateBtn();
+          });
+      }
+
+      function unsubscribeUser() {
+        swRegistration.pushManager
+          .getSubscription()
+          .then(function (subscription) {
+            if (subscription) {
+              return subscription.unsubscribe();
+            }
+          })
+          .catch(function (error) {
+            console.log("Error unsubscribing", error);
+          })
+          .then(function () {
+            updateSubscriptionOnServer(null);
+
+            console.log("User is unsubscribed.");
+            isSubscribed = false;
+
+            updateBtn();
+          });
+      }
+
+      function updateSubscriptionOnServer(subscription) {
+        console.log(JSON.stringify(subscription));
+      }
+
+      function urlB64ToUint8Array(base64String) {
+        const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
+        const base64 = (base64String + padding)
+          .replace(/\-/g, "+")
+          .replace(/_/g, "/");
+
+        const rawData = window.atob(base64);
+        const outputArray = new Uint8Array(rawData.length);
+
+        for (let i = 0; i < rawData.length; ++i) {
+          outputArray[i] = rawData.charCodeAt(i);
+        }
+        return outputArray;
+      }
+
+      // Registering our Service worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("sw.js", { scope: "./" })
+          .then(function (swReg) {
+            console.log("Service Worker is registered", swReg);
+            swRegistration = swReg;
+            initializeUI();
+          });
+      }
+    </script>  

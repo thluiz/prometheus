@@ -7,7 +7,7 @@ defmodule PrometheusWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_prometheus_web_key",
-    signing_salt: "FhAaH9IN"
+    signing_salt: "Eo1wdH2J"
   ]
 
   socket "/socket", PrometheusWeb.UserSocket,
