@@ -19,7 +19,7 @@ COPY . .
 
 RUN yarn --cwd apps/prometheus_web/assets install --pure-lockfile && \
     yarn --cwd apps/prometheus_web/assets deploy && \
-    cd apps/web && mix phx.digest
+    cd apps/prometheus_web && mix phx.digest
 
 RUN mix release
 
