@@ -9,8 +9,8 @@ RUN apk add --no-cache build-base nodejs yarn && \
     mix local.rebar --force
 
 COPY mix.exs mix.lock config/ ./
-COPY apps/web/mix.exs ./apps/web/
-COPY apps/database/mix.exs ./apps/database/
+COPY apps/prometheus_web/mix.exs ./apps/web/
+COPY apps/prometheus/mix.exs ./apps/prometheus/
 
 RUN mix deps.get --only prod && \
     mix deps.compile
