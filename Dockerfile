@@ -28,7 +28,6 @@ RUN mix release
 
 FROM elixir:1.10.2-alpine
 
-
 RUN addgroup -S release && \
     adduser -S -G release release && \
     mkdir /release && \
@@ -36,7 +35,7 @@ RUN addgroup -S release && \
 
 WORKDIR /release
 
-COPY --from=build --chown=release:release /build/_build/prod/rel/prometheus .
+COPY --from=build --chown=release:release /build/_build/prod/rel/production/bin/production .
 
 USER release
 EXPOSE 4000
