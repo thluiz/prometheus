@@ -40,4 +40,4 @@ COPY --from=build --chown=release:release /build/_build/prod/rel/production/bin/
 USER release
 EXPOSE 4000
 
-CMD ["bin/prometheus", "start"]
+CMD ["bin/production", "start"]
