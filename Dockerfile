@@ -16,11 +16,11 @@ FROM node:12.16.2 as asset-builder
 ENV HOME=/opt/app
 WORKDIR $HOME
 
-COPY --from=asset-builder-mix-getter $HOME/deps $HOME/deps
+# COPY --from=asset-builder-mix-getter $HOME/deps $HOME/deps
 
 WORKDIR $HOME/assets
 COPY assets/ ./
-RUN yarn install
+RUN npm install
 RUN ./node_modules/webpack/bin/webpack.js --mode="production"
 
 ############################################################
