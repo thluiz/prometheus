@@ -35,9 +35,10 @@ RUN addgroup -S release && \
 
 WORKDIR /release
 
+                                                 _build/prod/rel/production/bin/production
 COPY --from=build --chown=release:release /build/_build/prod/rel/production/bin/production .
 
 USER release
 EXPOSE 4000
 
-CMD ["bin/production", "start"]
+CMD ["production", "start"]
