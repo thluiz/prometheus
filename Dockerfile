@@ -16,7 +16,7 @@ RUN cd assets && \
 ADD . .
 
 # Run frontend build, compile, and digest assets
-RUN cd assets/ && \
+RUN cd apps/prometheus_web/assets/ && \
     npm run deploy && \
     cd - && \
     mix do compile, phx.digest
