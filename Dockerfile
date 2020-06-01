@@ -38,6 +38,6 @@ WORKDIR /release
 COPY --from=build --chown=release:release /build/_build/. .
 
 USER release
-EXPOSE 4000
+EXPOSE 5000
 
 CMD ["./prod/rel/production/bin/production", "start"]
