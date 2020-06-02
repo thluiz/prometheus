@@ -13,7 +13,7 @@ defmodule PrometheusWeb.PageLive do
     socket
     |> assign(:subscription, subscription)
     |> assign(:subscribed, (if subscribed, do: "yes", else: "no"))
-    |> upsert_notification
+    |> update_notification
 
     { :noreply, socket }
   end
@@ -27,7 +27,7 @@ defmodule PrometheusWeb.PageLive do
 
   def update_notification(socket) do
     if Map.has_key?(socket.assigns, :userkey) && Map.has_key?(socket.assigns, :subscription) do
-      Notifications.create_or_update_notification(socket.assigns.userkey, NotificationType, socket.assigns.subscription)
+      Notifications.upsert_notification(socket.assigns.userkey, NotificationType, socket.assigns.subscription)
     end
   end
 
