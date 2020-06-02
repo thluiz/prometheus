@@ -14,7 +14,7 @@ config :prometheus_web, PrometheusWeb.Endpoint,
   http: [port: 5000],
   url: [host: "agenda.myvtmi.im", port: 5000],
   cache_static_manifest: "priv/static/cache_manifest.json",
-  check_origin: [ "agenda3.myvtmi.im", "agenda2.myvtmi.im", "agenda.myvtmi.im" ]
+  check_origin: [ "agenda3.myvtmi.im", "agenda2.myvtmi.im", "agenda.myvtmi.im" ],
   server: true,
   code_reloader: false
 
