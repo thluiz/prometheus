@@ -10,11 +10,12 @@ defmodule PrometheusWeb.PageLive do
 
   @impl true
   def handle_event("update-subscription", %{ "subscription" => subscription, "subscribed" => subscribed }, socket) do
-    update_notification(socket)
+    socket
+    |> assign(:subscription, subscription)
+    |> assign(:subscribed, (if subscribed, do: "yes", else: "no"))
+    |> update_notification
 
-    assign(socket, :subscription, subscription)
-
-    { :noreply, assign(socket, :subscribed, (if subscribed, do: "yes", else: "no") ) }
+    { :noreply, socket }
   end
 
   @impl true
