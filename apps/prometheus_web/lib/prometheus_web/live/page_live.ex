@@ -13,7 +13,7 @@ defmodule PrometheusWeb.PageLive do
     socket
     |> assign(:subscription, subscription)
     |> assign(:subscribed, (if subscribed, do: "yes", else: "no"))
-    |> update_notification
+    |> upsert_notification
 
     { :noreply, socket }
   end
