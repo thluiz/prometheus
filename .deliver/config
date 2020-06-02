@@ -1,4 +1,4 @@
-APP="prometheus"
+APP="prometheus_umbrella"
 
 BUILD_HOST="sig.myvtmi.im"
 BUILD_USER="thluiz"
