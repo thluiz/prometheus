@@ -10,8 +10,12 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :prometheus_web, PrometheusWeb.Endpoint,
-  url: [host: "agenda.myvtmi.im.com", port: 5000],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  load_from_system_env: true,
+  http: [port: 5000],
+  url: [host: "agenda.myvtmi.im", port: 5000],
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  server: true,
+  code_reloader: false
 
 # ## SSL Support
 #

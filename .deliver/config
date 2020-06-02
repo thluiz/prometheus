@@ -1,0 +1,10 @@
+APP="prometheus"
+
+BUILD_HOST="sig.myvtmi.im"
+BUILD_USER="thluiz"
+BUILD_AT="/home/thluiz/app_build"
+
+PRODUCTION_HOSTS="sig.myvtmi.im" 
+PRODUCTION_USER="thluiz" 
+DELIVER_TO="/home/thluiz/app_release" 
+

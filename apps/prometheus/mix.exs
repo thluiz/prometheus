@@ -39,7 +39,9 @@ defmodule Prometheus.MixProject do
       {:phoenix_pubsub, "~> 2.0"},
       {:ecto_sql, "~> 3.4"},
       {:postgrex, ">= 0.0.0"},
-      {:jason, "~> 1.0"}
+      {:jason, "~> 1.0"},
+      {:edeliver, ">= 1.8.0"},
+      {:distillery, "~> 2.1"}
     ]
   end
 
