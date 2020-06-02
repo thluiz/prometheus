@@ -1,10 +1,10 @@
 APP="prometheus_umbrella"
 
-BUILD_HOST="sig.myvtmi.im"
+BUILD_HOST="167.172.23.169"
 BUILD_USER="thluiz"
 BUILD_AT="/home/thluiz/app_build"
 
-PRODUCTION_HOSTS="sig.myvtmi.im" 
+PRODUCTION_HOSTS="167.172.23.169" 
 PRODUCTION_USER="thluiz" 
 DELIVER_TO="/home/thluiz/app_release" 
 
