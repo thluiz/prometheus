@@ -19,7 +19,7 @@ defmodule Prometheus.Notifications do
 
   """
   def create_or_update_notification(userkey, type, data) do
-    user = Accounts.get_or_create_user(userkey)
+    {:ok, user } = Accounts.get_or_create_user(userkey)
 
     case get_notification_by_user_and_type(user, type) do
       nil -> create_notification(%{ user_id: user.id, type: type, data: data })
@@ -37,7 +37,6 @@ defmodule Prometheus.Notifications do
 
   """
   def get_notification_by_user_and_type(user, type) do
-    IO.inspect user
     (from n in Notification, where: n.type == ^type and n.user_id == ^(user.id))
     |> first
     |> Repo.one
