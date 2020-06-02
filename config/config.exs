@@ -9,6 +9,9 @@
 # move said applications out of the umbrella.
 use Mix.Config
 
+# Tzdata configuration
+config :elixir, :time_zone_database, Tzdata.TimeZoneDatabase
+
 # Configure Mix tasks and generators
 config :prometheus,
   ecto_repos: [Prometheus.Repo]

@@ -14,7 +14,7 @@ config :prometheus_web, PrometheusWeb.Endpoint,
   http: [port: 5000],
   url: [host: "agenda.myvtmi.im", port: 5000],
   cache_static_manifest: "priv/static/cache_manifest.json",
-  check_origin: false,
+  check_origin: false, # multiple clients
   server: true,
   code_reloader: false
 
