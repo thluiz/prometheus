@@ -10,15 +10,15 @@ defmodule Prometheus.Notifications do
   alias Prometheus.Notifications.Notification
 
   @doc """
-  Create or update a User Notification of a given type
+  Insert or update a User Notification of a given type
 
   ## Examples
 
-      iex> create_or_update_notification("xpto", "web-serviceworker", "data")
+      iex> upsert_notification("xpto", "web-serviceworker", "data")
       %Notification{}
 
   """
-  def create_or_update_notification(userkey, type, data) do
+  def upsert_notification(userkey, type, data) do
     {:ok, user } = Accounts.get_or_create_user(userkey)
 
     case get_notification_by_user_and_type(user, type) do
