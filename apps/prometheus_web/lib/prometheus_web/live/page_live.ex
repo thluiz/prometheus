@@ -27,7 +27,7 @@ defmodule PrometheusWeb.PageLive do
 
   def update_notification(socket) do
     if Map.has_key?(socket.assigns, :userkey) && Map.has_key?(socket.assigns, :subscription) do
-      Notifications.upsert_notification(socket.assigns.userkey, NotificationType, socket.assigns.subscription)
+      Notifications.upsert_notification(socket.assigns.userkey, "sw", socket.assigns.subscription)
     end
   end
 
