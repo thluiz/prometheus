@@ -1,4 +1,4 @@
-const cacheName = 'TempMYVTMIIM';
+const cacheName = 'TempMYVTMIIM_2020';
 
 // Cache all the files to make a PWA
 self.addEventListener('install', e => {
@@ -6,8 +6,7 @@ self.addEventListener('install', e => {
         caches.open(cacheName).then(cache => {
             // Our application only has two files here index.html and manifest.json
             // but you can add more such as style.css as your app grows
-            return cache.addAll([
-                './',
+            return cache.addAll([                
                 './js/manifest.json',
                 './css/app.css',
                 './images/agenda-semana-23.png',
