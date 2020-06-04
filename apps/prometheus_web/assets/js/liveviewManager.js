@@ -50,6 +50,7 @@ export class LiveviewManager {
 
                 this.pushEvent("restore-settings", {
                     userkey: currentkey,
+                    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
                 });
             }
         }

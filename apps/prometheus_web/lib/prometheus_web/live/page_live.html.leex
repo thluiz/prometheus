@@ -4,206 +4,182 @@
     </div>
 </div>
 
-<!-- div class="row">
+
+
+  <%= if @weekday == 1 || @weekday == 0 || @weekday == 7  do %>
+    <!-- SEGUNDA, Sábado ou Domingo -->
+    <div class="row">
         <div class="column">
-          <div class="card show-yellow">
-            <div class="container">
-              <h6 class="title">Reunião de Gestão</h6>
-              <span class="when">10:00 - 10:30</span>
-              <p>Aberto aos Tutores e Gestores dos Centros de Transmissão</p>
-              <p>
-                <a href="https://meet.google.com/mha-nydc-ppf" target="_blank" rel="noopener">
-                  https://meet.google.com/mha-nydc-ppf
-                </a>
-              </p>
+            <h4 class="when">Segunda</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card show-green">
+                <div class="container">
+                    <h6 class="title">Programa Fundamental</h6>
+                    <span class="when">19:00 - 20:00</span>
+                    <p>Aberto a todos</p>
+                    <p>
+                        <a href="https://meet.google.com/btz-nzhc-pmp" target="_blank" rel="noopener">
+                https://meet.google.com/btz-nzhc-pmp
+              </a>
+                    </p>
+                </div>
             </div>
+        </div>
+        <div class="column">
+            <div class="card show-green">
+                <div class="container">
+                    <h6 class="title">Programa Experiencial</h6>
+                    <span class="when">20:00 - 20:30</span>
+                    <p>Aberto a todos como ouvintes</p>
+                    <p>
+                        <a href="https://meet.google.com/btz-nzhc-pmp" target="_blank" rel="noopener">
+                https://meet.google.com/btz-nzhc-pmp
+              </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card show-green">
+                <div class="container">
+                    <h6 class="title">Programa Tradicional</h6>
+                    <span class="when">20:30 - 21:00</span>
+                    <p>Aberto a todos como ouvintes</p>
+                    <p>Voltado para os praticantes do Programa Tradicional</p>
+                    <p>
+                        <a href="https://meet.google.com/btz-nzhc-pmp" target="_blank" rel="noopener">
+                https://meet.google.com/btz-nzhc-pmp
+              </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card show-red">
+                <div class="container">
+                    <h6 class="title">Nível Superior Final</h6>
+                    <span class="when">21:00 - 22:00</span>
+                    <p>Reservado a acessantes desse domínio</p>
+                    <p>
+                        <a href="https://meet.google.com/btz-nzhc-pmp" target="_blank" rel="noopener">
+                https://meet.google.com/btz-nzhc-pmp
+              </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  <!-- FIM SEGUNDA -->
+  <% end %>
+
+
+  <%= if @weekday == 2 || @weekday == 3 do %>
+    <!-- TERÇA e QUARTA -->
+    <div class="row">
+      <div class="column">
+        <h4 class="when">Quarta</h4>
+      </div>
+    </div>
+
+          <div class="row">
+      <div class="column">
+        <div class="card show-green">
+          <div class="container">
+            <h6 class="title">Programa Fundamental</h6>
+            <span class="when">16:00 - 17:00</span>
+            <p>Aberto a todos como ouvintes</p>
+            <p>
+              <a href="https://meet.google.com/uai-jyse-iyb" target="_blank" rel="noopener">
+                https://meet.google.com/uai-jyse-iyb
+              </a>
+            </p>
           </div>
         </div>
-        <div class="column">
-          <div class="card show-yellow">
-            <div class="container">
-              <h6 class="title">
-                Atividade Especial com Tutores
-              </h6>
-              <span class="when">10:30 - 12:00</span>
-              <p>Tutores e Gestores dos Centros de Transmissão</p>
-              <p>
-                <a href="https://meet.google.com/mha-nydc-ppf" target="_blank" rel="noopener">
-                  https://meet.google.com/mha-nydc-ppf
-                </a>
-              </p>
-            </div>
+      </div>
+
+      <div class="column">
+        <div class="card show-green">
+          <div class="container">
+            <h6 class="title">Programa Experiencial</h6>
+            <span class="when">17:00 - 17:30</span>
+            <p>Aberto a todos como ouvintes</p>
+            <p>
+              <a href="https://meet.google.com/uai-jyse-iyb" target="_blank" rel="noopener">
+                https://meet.google.com/uai-jyse-iyb
+              </a>
+            </p>
           </div>
         </div>
-      </div -->
-
-<div class="row">
-    <div class="column">
-        <h4 class="when">Segunda 01/06/2020</h4>
-    </div>
-</div>
-
-<div class="row">
-    <div class="column">
+      </div>
+      <div class="column">
         <div class="card show-green">
-            <div class="container">
-                <h6 class="title">Programa Fundamental</h6>
-                <span class="when">19:00 - 20:00</span>
-                <p>Aberto a todos</p>
-                <p>
-                    <a href="https://meet.google.com/btz-nzhc-pmp" target="_blank" rel="noopener">
-            https://meet.google.com/btz-nzhc-pmp
-          </a>
-                </p>
-            </div>
+          <div class="container">
+            <h6 class="title">Programa Tradicional</h6>
+            <span class="when">17:30 - 18:00</span>
+            <p>Voltado para os praticantes do Programa Tradicional</p>
+            <p>
+              <a href="https://meet.google.com/uai-jyse-iyb" target="_blank" rel="noopener">
+                https://meet.google.com/uai-jyse-iyb
+              </a>
+            </p>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="column">
-        <div class="card show-green">
-            <div class="container">
-                <h6 class="title">Programa Experiencial</h6>
-                <span class="when">20:00 - 20:30</span>
-                <p>Aberto a todos como ouvintes</p>
-                <p>
-                    <a href="https://meet.google.com/btz-nzhc-pmp" target="_blank" rel="noopener">
-            https://meet.google.com/btz-nzhc-pmp
-          </a>
-                </p>
-            </div>
+    <div class="row">
+      <div class="column">
+        <div class="card show-blue">
+          <div class="container">
+            <h6 class="title">Encontro Remoto com Grão Mestre Leo Imamura</h6>
+            <span class="when">19:00 - 20:00</span>
+            <p>Aberto a todos</p>
+            <p>
+              <a href="https://us02web.zoom.us/j/81171623890?pwd=QmdPMHJzRlA0T0IxL21DWVU4SDROUT09" target="_blank" rel="noopener">
+                https://us02web.zoom.us/j/81171623890?pwd=QmdPMHJzRlA0T0IxL21DWVU4SDROUT09
+              </a>
+            </p>
+
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="column">
-        <div class="card show-green">
-            <div class="container">
-                <h6 class="title">Programa Tradicional</h6>
-                <span class="when">20:30 - 21:00</span>
-                <p>Aberto a todos como ouvintes</p>
-                <p>Voltado para os praticantes do Programa Tradicional</p>
-                <p>
-                    <a href="https://meet.google.com/btz-nzhc-pmp" target="_blank" rel="noopener">
-            https://meet.google.com/btz-nzhc-pmp
-          </a>
-                </p>
-            </div>
+    <div class="row">
+      <div class="column">
+        <div class="card show-blue">
+          <div class="container">
+            <h6 class="title">
+              Encontro Temático Remoto com Mestre Senior Julio Camacho
+            </h6>
+            <span class="when">20:15 - 22:00</span>
+            <p>Aberto a todos</p>
+            <p>
+              <a href="https://meet.google.com/nzf-dtfz-mjo" target="_blank" rel="noopener">
+                https://meet.google.com/nzf-dtfz-mjo
+              </a>
+            </p>
+          </div>
         </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="column">
-        <div class="card show-red">
-            <div class="container">
-                <h6 class="title">Nível Superior Final</h6>
-                <span class="when">21:00 - 22:00</span>
-                <p>Reservado a acessantes desse domínio</p>
-                <p>
-                    <a href="https://meet.google.com/btz-nzhc-pmp" target="_blank" rel="noopener">
-            https://meet.google.com/btz-nzhc-pmp
-          </a>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- QUARTA -->
-<!-- div class="row">
-  <div class="column">
-    <h4 class="when">Quarta 27/05/2020</h4>
-  </div>
-</div>
-
-      <div class="row">
-  <div class="column">
-    <div class="card show-green">
-      <div class="container">
-        <h6 class="title">Programa Fundamental</h6>
-        <span class="when">16:00 - 17:00</span>
-        <p>Aberto a todos como ouvintes</p>
-        <p>
-          <a href="https://meet.google.com/uai-jyse-iyb" target="_blank" rel="noopener">
-            https://meet.google.com/uai-jyse-iyb
-          </a>
-        </p>
       </div>
     </div>
-  </div>
+    <!-- FIM QUARTA -->
+    <% end %>
 
-  <div class="column">
-    <div class="card show-green">
-      <div class="container">
-        <h6 class="title">Programa Experiencial</h6>
-        <span class="when">17:00 - 17:30</span>
-        <p>Aberto a todos como ouvintes</p>
-        <p>
-          <a href="https://meet.google.com/uai-jyse-iyb" target="_blank" rel="noopener">
-            https://meet.google.com/uai-jyse-iyb
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="card show-green">
-      <div class="container">
-        <h6 class="title">Programa Tradicional</h6>
-        <span class="when">17:30 - 18:00</span>
-        <p>Voltado para os praticantes do Programa Tradicional</p>
-        <p>
-          <a href="https://meet.google.com/uai-jyse-iyb" target="_blank" rel="noopener">
-            https://meet.google.com/uai-jyse-iyb
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="column">
-    <div class="card show-blue">
-      <div class="container">
-        <h6 class="title">Encontro Remoto com Grão Mestre Leo Imamura</h6>
-        <span class="when">19:00 - 20:00</span>
-        <p>Aberto a todos</p>
-        <p>
-          <a href="https://us02web.zoom.us/j/81171623890?pwd=QmdPMHJzRlA0T0IxL21DWVU4SDROUT09" target="_blank" rel="noopener">
-            https://us02web.zoom.us/j/81171623890?pwd=QmdPMHJzRlA0T0IxL21DWVU4SDROUT09
-          </a>
-        </p>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="column">
-    <div class="card show-blue">
-      <div class="container">
-        <h6 class="title">
-          Encontro Temático Remoto com Mestre Senior Julio Camacho
-        </h6>
-        <span class="when">20:15 - 22:00</span>
-        <p>Aberto a todos</p>
-        <p>
-          <a href="https://meet.google.com/nzf-dtfz-mjo" target="_blank" rel="noopener">
-            https://meet.google.com/nzf-dtfz-mjo
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-</div -->
-
-<!-- FIM QUARTA -->
-
-<!-- Inicio Quinta -->
-<!-- div class="row">
+    <%= if @weekday == 4 do %>
+    <!-- Inicio Quinta -->    
+    <div class="row">
         <div class="column">
-          <h4 class="when">Quinta 28/05/2020</h4>
+          <h4 class="when">Quinta</h4>
         </div>
       </div>
 
@@ -222,14 +198,15 @@
             </div>
           </div>
         </div>
-      </div -->
+      </div>    
+      <!-- Fim Quinta -->
+      <% end %>
 
-<!-- Fim Quinta -->
-
-<!-- Inicio Sexta -->
-<!-- div class="row">
+      <%= if @weekday == 5 do %>
+      <!-- Inicio Sexta -->
+      <div class="row">
         <div class="column">
-          <h4 class="when">Sexta 29/05/2020</h4>
+          <h4 class="when">Sexta</h4>
         </div>
       </div>
 
@@ -295,9 +272,10 @@
             </div>
           </div>
         </div>
-      </div -->
+      </div>
+    <!-- Fim Sexta -->
+    <% end %>
 
-<!-- Fim Sexta -->
 
 <div class="row">
     <div class="column">
@@ -313,7 +291,7 @@
 <div class="row">
     <div class="col">
       
-      <button   
+      <button
         id="toggle-subscription" phx-hook="Subscription"       
         class="js-push-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
       
