@@ -1,19 +1,29 @@
-const cacheName = 'TempMYVTMIIM_2020';
+const cacheName = 'CACHE_MYVTMIIM_2020';
 
 // Cache all the files to make a PWA
 self.addEventListener('install', e => {
-    e.waitUntil(
-        caches.open(cacheName).then(cache => {
-            // Our application only has two files here index.html and manifest.json
-            // but you can add more such as style.css as your app grows
-            return cache.addAll([                
-                './js/manifest.json',
-                './css/app.css',
-                './images/agenda-semana-23.png',
-                './images/logo-myvtim.png',
-                './images/favicon.ico'
-            ]);
-        })
+    e.waitUntil(function () {
+            caches.open(cacheName).then(cache => {
+                // Our application only has two files here index.html and manifest.json
+                // but you can add more such as style.css as your app grows
+                return cache.addAll([                
+                    //'./js/manifest.json',
+                    //'./css/app.css',
+                    //'./images/agenda-semana-23.png',
+                    './images/logo-myvtim.png',
+                    './images/favicon.ico'
+                ]);
+            });
+
+            //TODO: clean up old caches: TEMPMYVTMIIM, Temporas, TempMYVTMIIM_2020
+            try {
+                caches.open("Temporas").then(cache => {
+
+                });
+            } catch {
+                //  nothing to do
+            }
+        }
     );
 });
 
@@ -34,7 +44,7 @@ self.addEventListener('push', function(event) {
     console.log('[Service Worker] Push Received.');
     console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
 
-    const title = 'Push Codelab';
+    const title = 'MYVTMI.IM Codelab';
     const options = {
         body: 'Yay it works.',
         icon: 'images/logo-myvtim.png',
@@ -51,6 +61,6 @@ self.addEventListener('notificationclick', function(event) {
     event.notification.close();
 
     //event.waitUntil(
-    //    clients.openWindow('https://developers.google.com/web/')
+    //    clients.openWindow('TEST!')
     //);
 });
