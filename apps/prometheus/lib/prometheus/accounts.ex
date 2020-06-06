@@ -17,7 +17,7 @@ defmodule Prometheus.Accounts do
       %User{}
 
   """
-  def get_or_create_user(userkey) do
+  def get_or_create_user(userkey) do    
     case get_user_by_key(userkey) do
       nil -> create_user(%{ userkey: userkey })
       user -> {:ok, user}

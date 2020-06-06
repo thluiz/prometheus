@@ -62,8 +62,6 @@ defmodule PrometheusWeb.PageLive do
 
     { _, %DateTime{ :year => year, :month => month, :day => day } } = DateTime.now(timezone)
 
-    
-
     :calendar.day_of_the_week(year, month, day)
   end
 
