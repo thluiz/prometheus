@@ -12,7 +12,7 @@ defmodule Prometheus.Umbrella.MixProject do
         production: [
           applications: [
             prometheus: :permanent,
-            prometheus_web: :permanent
+            prometheus_web: :permanent            
           ]
         ]
       ]
@@ -32,7 +32,7 @@ defmodule Prometheus.Umbrella.MixProject do
   # Dependencies listed here are available only for this project
   # and cannot be accessed from applications inside the apps/ folder.
   defp deps do
-    [ ]
+    [ {:edeliver, ">= 1.8.0"} ]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

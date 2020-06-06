@@ -1,10 +1,21 @@
 APP="prometheus_umbrella"
 
-BUILD_HOST="167.172.23.169"
+BUILD_HOST="agenda.myvtmi.im"
 BUILD_USER="thluiz"
 BUILD_AT="/home/thluiz/app_build"
 
-PRODUCTION_HOSTS="167.172.23.169" 
+PRODUCTION_HOSTS="agenda.myvtmi.im" 
 PRODUCTION_USER="thluiz" 
 DELIVER_TO="/home/thluiz/app_release" 
 
+pre_erlang_get_and_update_deps() {
+  if [ "$TARGET_MIX_ENV" = "prod" ]; then
+    __sync_remote "
+      source ~/.profile
+    "
+
+    __sync_remote "
+      npm install --prefix '$BUILD_AT/apps/prometheus_umbrella/assets'
+    "
+  fi
+}
