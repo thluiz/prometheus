@@ -62,7 +62,7 @@ export class LiveviewManager {
 
         // expose liveSocket on window for web console debug logs and latency simulation:
         // >> 
-        liveSocket.enableDebug()
+        // liveSocket.enableDebug()
         // >> liveSocket.enableLatencySim(1000)
 
         //Backward compatibility

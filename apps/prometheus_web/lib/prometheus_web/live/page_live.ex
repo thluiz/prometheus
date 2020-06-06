@@ -40,6 +40,7 @@ defmodule PrometheusWeb.PageLive do
     {:noreply, assign(socket, :userkey, userkey)}
   end
 
+  @impl true
   def handle_info(:update, socket) do
     Process.send_after(self(), :update, 30000)
 
@@ -59,7 +60,10 @@ defmodule PrometheusWeb.PageLive do
   defp get_week_day(current_timezone  \\ "") do
     timezone = if current_timezone == "", do: @timezone_default, else: current_timezone
 
-    { result, %DateTime{ :year => year, :month => month, :day => day } } = DateTime.now(timezone)
+    { _, %DateTime{ :year => year, :month => month, :day => day } } = DateTime.now(timezone)
+
+    
+
     :calendar.day_of_the_week(year, month, day)
   end
 
