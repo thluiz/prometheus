@@ -34,7 +34,7 @@ defmodule Prometheus.Umbrella.MixProject do
   defp deps do
     [
       {:edeliver, ">= 1.8.0"},
-      {:distillery, "~> 2.0", warn_missing: false}
+      {:distillery, "~> 2.1" }
     ]
   end
 

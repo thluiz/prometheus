@@ -4,6 +4,10 @@ BUILD_HOST="agenda.myvtmi.im"
 BUILD_USER="thluiz"
 BUILD_AT="/home/thluiz/app_build"
 
+STAGING_HOSTS="agenda.myvtmi.im"
+STAGING_USER="thluiz"
+DELIVER_TO="/home/thluiz/app_release"
+
 PRODUCTION_HOSTS="agenda.myvtmi.im" 
 PRODUCTION_USER="thluiz" 
 DELIVER_TO="/home/thluiz/app_release" 
