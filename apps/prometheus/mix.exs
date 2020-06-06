@@ -23,7 +23,7 @@ defmodule Prometheus.MixProject do
   def application do
     [
       mod: {Prometheus.Application, []},
-      extra_applications: [:logger, :runtime_tools, :edeliver ]
+      extra_applications: [:logger, :runtime_tools ]
     ]
   end
 
