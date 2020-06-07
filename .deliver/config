@@ -19,7 +19,7 @@ pre_erlang_get_and_update_deps() {
     "
 
     __sync_remote "
-      npm install --prefix '$BUILD_AT/apps/prometheus_umbrella/assets'
+      npm install --prefix '$BUILD_AT/apps/prometheus_web/assets'
     "
   fi
 }
