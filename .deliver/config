@@ -23,6 +23,7 @@ pre_erlang_get_and_update_deps() {
     "
 
     __sync_remote "
+      cd '$BUILD_AT/apps/prometheus_web' 
       mix phx.digest
     "
   fi
